@@ -1,4 +1,5 @@
 #! /bin/sh
+
 echo '选择要安装的开发环境:
 [1] java openjdk-8
 [2] golang'
@@ -25,7 +26,7 @@ case $number in
                         read -p '是否需要对golang配置代理?[y/n]' flag
                         case $flag in
                                     Y | y )
-                                     echo 'export GO111MODULE="on"\nexport GOPATH="$dir"\nexport GOPROXY="https://goproxy.cn"' >>  ~/.bashrc
+                                     echo "export GO111MODULE='on'\nexport GOPATH='${dir}'\nexport GOPROXY='https://goproxy.cn'" >>  ~/.bashrc
                                     ;;
                         esac
                         read -p '是否马上重启 [y/n]' flag
