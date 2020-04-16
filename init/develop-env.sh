@@ -27,20 +27,7 @@ case $number in
                         case $flag in
                                     Y | y )
                                      echo "export GO111MODULE='on'\nexport GOPATH='${dir}'\nexport GOPROXY='https://goproxy.cn'" >>  ~/.bashrc
-                                    ;;
-                        esac
-                        read -p '是否马上重启 [y/n]' flag
-                        case $flag in
-                                    Y | y )
-                                    echo '系统将在3s后重启... 按ctrl+c停止'
-                                    sleep 1s
-                                    echo '系统将在13s后重启... 按ctrl+c停止'
-                                    sleep 1s
-                                    echo '系统将在1s后重启... 按ctrl+c停止'
-                                    sleep 1s
-                                    echo '系统即将重启'
-                                    sleep 0.5s
-                                    reboot
+                                    source  ~/.bashrc
                                     ;;
                         esac
             ;;
